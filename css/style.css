@@ -267,15 +267,17 @@ a {
 }
 
 .sub_list {
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 100%;
     white-space: nowrap;
+    transition: all .5s linear;
 }
 
 .main_list li:hover .sub_list{
-    display: block;
+    opacity: 1;
+    left: 0;
 }
 
 .padd_left {
@@ -284,6 +286,11 @@ a {
 
 .main_list {
     gap: 10px;
+    overflow: hidden;
+}
+
+.main_list:hover {
+    overflow: visible;
 }
 
 .pos_relative {
@@ -293,13 +300,15 @@ a {
 .flex {
     position: absolute;
     top: 0;
-    right: 100%;
-    display: none;
+    left: 0;
+    opacity: 0;
     width: 100%;
+    transition: all .5s linear;
 }
 
 .sub_list li:hover .flex {
-    display: block;
+    opacity: 1;
+    left: -100%;
 }
 
 .main_header li {
@@ -326,4 +335,12 @@ a {
 
 .gap_50 {
     gap: 50px;
+}
+
+.main_list li {
+    transition: all .3s linear;
+}
+
+.main_list li:hover {
+    background: rgb(0, 163, 163);
 }
