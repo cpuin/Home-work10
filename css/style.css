@@ -53,6 +53,10 @@ tr, td {
     height: 80px;
 }
 
+body {
+    background: gray;
+}
+
 .clearfix::after {
     content: "";
     display: block;
@@ -343,4 +347,144 @@ a {
 
 .main_list li:hover {
     background: rgb(0, 163, 163);
+}
+
+.sidebar_link {
+    border: none;
+    text-align: left;
+    position: relative;
+    padding: 10px 0;
+}
+
+.sidebar_item {
+    margin-bottom: 30px;
+}
+
+.sidebar_item:last-child {
+    padding-bottom: 0;
+}
+
+.sidebar_link span {
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar_link p {
+    padding-left: 90px;
+    font-size: 20px;
+}
+
+.sidebar {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    background: rgb(172, 172, 172);
+    z-index: 50;
+    transition: width .3s linear;
+}
+
+.wrapper {
+    padding-left: 70px;
+    transition: padding .3s linear;
+}
+.sidebar:hover {
+    width: 250px;
+}
+
+.sidebar:hover + .wrapper {
+    padding-left: 250px;
+}
+
+.sidebar_list {
+    padding-top: 77px;
+}
+
+.romb {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid black;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 5%;
+    left: 16px;
+    overflow: hidden;
+}
+
+.sidebar_link .aside_icon {
+    transform: rotate(-45deg);
+}
+
+.aside_icon {
+    fill: transparent;
+    width: 30px;
+    height: 30px;
+    transition: all .2s linear;
+}
+
+.sidebar_link:hover .aside_icon {
+    width: 40px;
+    height: 40px;
+}
+
+.buttons {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    margin-top: -140px;
+    background: aqua;
+    width: 0;
+    transition: all .5s linear;
+}
+
+.btn {
+    padding: 5px 100px;
+    margin: 40px;
+    display: block;
+    font-size: 20px;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+.right_sidebar_icon {
+    fill: transparent;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    margin-top: -20px;
+}
+
+.right_sidebar_icon {
+    animation: spin 2s linear infinite;
+    animation-play-state: running;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+.square {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: -40px;
+    margin-top: -20px;
+}
+
+.buttons:hover .right_sidebar_icon{
+    animation-play-state: paused;
+}
+
+.buttons:hover {
+    width: 334.45px;
 }
