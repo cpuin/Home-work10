@@ -399,7 +399,7 @@ a {
 }
 
 .sidebar_list {
-    padding-top: 77px;
+    padding-top: 107px;
 }
 
 .romb {
@@ -449,6 +449,7 @@ a {
 
 .btn:hover {
     cursor: pointer;
+    outline: 2px solid red;
 }
 
 
